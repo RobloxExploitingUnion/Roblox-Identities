@@ -100,3 +100,5 @@ if setclipboard then
     setclipboard(game:GetService("HttpService"):JSONEncode(act == print and identityCapabilities[realId][2] or {Real = identityCapabilities[realId][2], Fake = identityCapabilities[getthreadidentity()][2]}))
     act((act == print and ("Fulfilled requirements for Level '%u'"):format(getthreadidentity()) or "Requirements") .. " copied to clipboard")
 end
+
+if type(getthreadidentity()) == "string" then error("uh identity is VERY fake.. die.") end
